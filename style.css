@@ -131,4 +131,9 @@ body {
 /* ABOUT SECTION */
 .about-section {
   margin-top: 20px;
+
+}
+.about-description{
+    display: flex;
+    
 }
