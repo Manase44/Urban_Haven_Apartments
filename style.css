@@ -17,10 +17,12 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   font-family: var(--main-font);
 }
 /* Navigation bar */
 .nav-bar {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +32,7 @@ body {
   z-index: 200;
 }
 .nav-logo > a > img {
-  width: 80px;
+  width: 70px;
 }
 .nav-links {
   display: flex;
@@ -46,7 +48,7 @@ body {
 }
 .book-cta {
   background-color: var(--secondary-color);
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 0.5rem;
 }
 .toggle-icon {
@@ -63,8 +65,7 @@ body {
       to right,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.2)
-    ),
-    url(/public/house-interior-1.jpg);
+    );
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,6 +77,7 @@ body {
 }
 .display-banner-text1 {
   text-transform: capitalize;
+  font-size: 40px;
   font-family: var(--style-font);
   font-weight: 600;
   color: var(--secondary-color);
@@ -91,19 +93,6 @@ body {
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 450;
-}
-@media screen and (max-width: 692px) {
-  .nav-links {
-    display: none;
-  }
-  .toggle-icon {
-    display: block;
-  }
-  .display-banner-text1,
-  .display-banner-text2,
-  .display-banner-text3 {
-    text-align: center;
-  }
 }
 .display-banner-cta {
   margin-top: 20px;
@@ -124,16 +113,110 @@ body {
   transition: all 300ms linear;
   color: inherit;
 }
-.display-banner-cta > a:hover {
+.view-spaces-cta, .book-viewing-cta:hover{
   background-color: var(--secondary-color);
 }
+.view-spaces-cta:hover{
+  background-color: transparent;
+}
+
+
+
 
 /* ABOUT SECTION */
 .about-section {
   margin-top: 20px;
-
+  padding: 10px 40px;
+}
+.about-section-heading{
+  text-transform: uppercase;
+  text-align: center;
+}
+.about-section-subheading{
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 3px;
 }
 .about-description{
+  margin-top:20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+}
+.about-text > p{
+  text-align: justify;
+}
+.about-image{
+  display: flex;
+  justify-content: center;
+}
+.about-image > img {
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+
+/* SPACES SECTION */
+.spaces-section{
+  margin-top: 20px;
+  padding: 10px 50px;
+}
+.spaces-container{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+.space-card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  position: relative;
+}
+.space-picture{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.space-card-description{
+  padding:0 10px 10px;
+}
+.space-vacancy-banner{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 35px;
+  padding-bottom: 10px;
+}
+.space-vacancy-banner-number{
+  font-weight: 600;
+  font-size: 20px;
+}
+.space-vacancy-banner-text{
+  font-size: 5px;
+}
+
+
+@media screen and (max-width: 692px) {
+  .nav-links {
+    display: none;
+  }
+  .toggle-icon {
+    display: block;
+  }
+  .display-banner-text1,
+  .display-banner-text2,
+  .display-banner-text3 {
+    text-align: center;
+  }
+  
+  .about-description{
     display: flex;
-    
+    flex-direction: column;
+     
+  }
 }
