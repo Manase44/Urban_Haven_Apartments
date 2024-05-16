@@ -43,6 +43,11 @@ html, body{
     color: #222;
     font-weight: 600;
 }
+.book-cta{
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 0.5rem;
+}
 
 /* DISPLAY BANNER */
 .display-banner{
