@@ -10,6 +10,7 @@
 :root{
     --main-font: "Poppins", sans-serif;
     --style-font:"Dancing Script", cursive;
+    --secondary-color: orangered;
 }
 /* General styling */
 
@@ -41,4 +42,61 @@ html, body{
     font-size: 18px;
     color: #222;
     font-weight: 600;
+}
+
+/* DISPLAY BANNER */
+.display-banner{
+    height: 80vh;
+    width: 100vw;
+    margin-top: 90px;
+    padding: 5px 40px;
+    background-image: linear-gradient(to right,rgba(0,0,0,.4), rgba(0,0,0,.2)), url(/public/house-interior-1.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.display-banner-text1{
+    text-transform: capitalize;
+    font-family: var(--style-font);
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.display-banner-text2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size:40px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+}
+.display-banner-text3{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 450 ;
+}
+.display-banner-cta{
+    margin-top: 20px;
+    display: flex;
+    gap: 2rem;
+}
+.display-banner-cta > a{
+    text-decoration: none;
+    height:35px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:15px;
+    padding-right: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2rem;
+    transition: all 300ms linear;
+    color: inherit;
+}
+.display-banner-cta > a:hover {
+    background-color: var(--secondary-color);
 }
