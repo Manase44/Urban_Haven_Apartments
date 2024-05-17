@@ -32,7 +32,7 @@ body {
   z-index: 200;
 }
 .nav-logo > a > img {
-  width: 70px;
+  width: 80px;
 }
 .nav-links {
   display: flex;
@@ -46,10 +46,11 @@ body {
   color: #222;
   font-weight: 600;
 }
-.book-cta {
+.book-cta, .contact-form-send {
   background-color: var(--secondary-color);
   padding: 5px 10px;
   border-radius: 0.5rem;
+  border: none;
 }
 .toggle-icon {
   display: none;
@@ -65,7 +66,7 @@ body {
       to right,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.2)
-    );
+    ), url(/public/house-interior-2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -168,6 +169,7 @@ body {
   grid-template-columns: repeat(4, 2fr);
 }
 .space-card{
+  width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
   position: relative;
@@ -199,6 +201,60 @@ body {
 .space-vacancy-banner-text{
   font-size: 5px;
 }
+
+
+
+
+
+/* CONTACT SECTION */
+.contact-section{
+  margin-top: 20px;
+  padding:20px 40px;
+  background-color: #e2e8f0;
+}
+.contact-container{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+}
+.contact-images{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form > form{
+  text-align: center;
+  /* background-color: red; */
+  display:grid;
+  place-items: center;
+}
+.contact-form-input > input{
+  height: 35px;
+}
+.contact-form-input > input, .contact-form-input > textarea{
+  width: 300px;
+  margin:3px 0;
+  padding: 3px 5px;
+  border-radius:0.5rem;
+  outline: none;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 692px) {
