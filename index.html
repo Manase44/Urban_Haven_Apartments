@@ -379,16 +379,20 @@
           <p class="about-section-subheading">get intouch with us</p>
           <div class="contact-container">
             <div class="contact-images">
-              <img
-                src="/public/call.png"
-                width="100"
-                alt="A picture of a call icon"
-              />
-              <img
-                src="/public/email.png"
-                width="85"
-                alt="A picture of an email icon"
-              />
+              <a href="tel:+254718764327" title="Call us">
+                <img
+                  src="/public/call.png"
+                  width="100"
+                  alt="A picture of a call icon"
+                />
+              </a>
+              <a href="mailto:rhaven@apartments.com" title="Send us an email">
+                <img
+                  src="/public/email.png"
+                  width="85"
+                  alt="A picture of an email icon"
+                />
+              </a>
             </div>
             <div class="contact-form">
               <form action="">
@@ -396,8 +400,16 @@
                 <div class="contact-form-input">
                   <input
                     type="text"
-                    id="name"
-                    placeholder="Enter your name..."
+                    id="fname"
+                    placeholder="Enter your first name..."
+                    required
+                  />
+                </div>
+                <div class="contact-form-input">
+                  <input
+                    type="text"
+                    id="lname"
+                    placeholder="Enter your last name..."
                     required
                   />
                 </div>
