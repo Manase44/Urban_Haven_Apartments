@@ -170,7 +170,8 @@ body {
   gap: 30px;
 }
 .space-category {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -218,6 +219,7 @@ body {
 }
 .space-amenities > ul > li {
   list-style: none;
+  font-size: 15px;
 }
 .space-category-price {
   background-color: antiquewhite;
@@ -262,6 +264,10 @@ body {
   border: none;
 }
 
+/* BOOK SECTION */
+.book-section {
+  margin-top: 40px;
+}
 @media screen and (max-width: 1200px) {
   .spaces-container {
     grid-template-columns: repeat(2, 3fr);
