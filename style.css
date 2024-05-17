@@ -46,7 +46,8 @@ body {
   color: #222;
   font-weight: 600;
 }
-.book-cta, .contact-form-send {
+.book-cta,
+.contact-form-send {
   background-color: var(--secondary-color);
   padding: 5px 10px;
   border-radius: 0.5rem;
@@ -66,7 +67,8 @@ body {
       to right,
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.2)
-    ), url(/public/house-interior-2.jpg);
+    ),
+    url(/public/house-interior-2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -114,74 +116,79 @@ body {
   transition: all 300ms linear;
   color: inherit;
 }
-.view-spaces-cta, .book-viewing-cta:hover{
+.view-spaces-cta,
+.book-viewing-cta:hover {
   background-color: var(--secondary-color);
 }
-.view-spaces-cta:hover{
+.view-spaces-cta:hover {
   background-color: transparent;
 }
-
-
-
 
 /* ABOUT SECTION */
 .about-section {
   margin-top: 20px;
   padding: 10px 40px;
 }
-.about-section-heading{
+.about-section-heading {
   text-transform: uppercase;
   text-align: center;
 }
-.about-section-subheading{
+.about-section-subheading {
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 3px;
 }
-.about-description{
-  margin-top:20px;
+.about-description {
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
-.about-text > p{
+.about-text > p {
   text-align: justify;
 }
-.about-image{
+.about-image {
   display: flex;
   justify-content: center;
 }
 .about-image > img {
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-
-
 /* SPACES SECTION */
-.spaces-section{
+.spaces-section {
   margin-top: 20px;
   padding: 10px 50px;
 }
-.spaces-container{
-  margin-top: 30px;
+.spaces-container {
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(3, 2fr);
+  gap: 40px;
 }
-.space-card{
-  width: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.space-category {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  padding: 10px;
+}
+.space-category-name {
+  text-transform: capitalize;
+}
+.space-category-description {
+  font-size: 15px;
+}
+.space-picture {
+  margin: 10px 0 5px;
   position: relative;
 }
-.space-picture{
+.space-picture > img {
+  border-radius: 10px;
   width: 100%;
-  border-radius: 10px 10px 0 0;
 }
-.space-card-description{
-  padding:0 10px 10px;
-}
-.space-vacancy-banner{
+.space-vacancy-banner {
   position: absolute;
   top: 0;
   left: 20px;
@@ -191,71 +198,69 @@ body {
   background-color: var(--secondary-color);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  width: 35px;
+  width: 45px;
+  height: 60px;
   padding-bottom: 10px;
 }
-.space-vacancy-banner-number{
+.space-vacancy-banner-number {
   font-weight: 600;
   font-size: 20px;
 }
-.space-vacancy-banner-text{
+.space-vacancy-banner-text {
   font-size: 5px;
 }
-
-
-
-
+.space-amenities > h4 {
+  text-transform: capitalize;
+}
+.space-amenities > ul {
+  padding: 0 20px 10px;
+  text-align: justify;
+}
+.space-amenities > ul > li {
+  list-style: none;
+}
+.space-category-price {
+  background-color: antiquewhite;
+  text-align: center;
+  font-size: 18px;
+}
 
 /* CONTACT SECTION */
-.contact-section{
+.contact-section {
   margin-top: 20px;
-  padding:20px 40px;
+  padding: 20px 40px;
   background-color: #e2e8f0;
 }
-.contact-container{
+.contact-container {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 4fr);
 }
-.contact-images{
+.contact-images {
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.contact-form > form{
+.contact-form > form {
   text-align: center;
   /* background-color: red; */
-  display:grid;
+  display: grid;
   place-items: center;
 }
-.contact-form-input > input{
+.contact-form-input > input {
   height: 35px;
 }
-.contact-form-input > input, .contact-form-input > textarea{
+.contact-form-input > input,
+.contact-form-input > textarea {
   width: 300px;
-  margin:3px 0;
+  margin: 3px 0;
   padding: 3px 5px;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 692px) {
   .nav-links {
@@ -269,10 +274,9 @@ body {
   .display-banner-text3 {
     text-align: center;
   }
-  
-  .about-description{
+
+  .about-description {
     display: flex;
     flex-direction: column;
-     
   }
 }
