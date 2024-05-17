@@ -167,7 +167,7 @@ body {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  gap: 40px;
+  gap: 30px;
 }
 .space-category {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -262,7 +262,13 @@ body {
   border: none;
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 1200px) {
+  .spaces-container {
+    grid-template-columns: repeat(2, 3fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .nav-links {
     display: none;
   }
@@ -278,5 +284,16 @@ body {
   .about-description {
     display: flex;
     flex-direction: column;
+  }
+  .spaces-container {
+    grid-template-columns: repeat(1, 3fr);
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-images {
+    flex-direction: row;
   }
 }
