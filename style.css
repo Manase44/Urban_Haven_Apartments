@@ -65,10 +65,10 @@ body {
   padding: 5px 40px;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.4),
       rgba(0, 0, 0, 0.2)
     ),
-    url(/public/house-interior-2.jpg);
+    url(/public/house-interior-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,6 +143,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  gap: 15px;
 }
 .about-text > p {
   text-align: justify;
@@ -153,6 +154,7 @@ body {
 }
 .about-image > img {
   border-radius: 10px;
+  width: 400px;
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -200,7 +202,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 45px;
-  height: 60px;
+  height: 55px;
   padding-bottom: 10px;
 }
 .space-vacancy-banner-number {
@@ -208,7 +210,7 @@ body {
   font-size: 20px;
 }
 .space-vacancy-banner-text {
-  font-size: 5px;
+  font-size: 8px;
 }
 .space-amenities > h4 {
   text-transform: capitalize;
@@ -247,27 +249,39 @@ body {
 }
 .contact-form > form {
   text-align: center;
-  /* background-color: red; */
   display: grid;
   place-items: center;
 }
 .contact-form-input > input {
-  height: 35px;
+  height: 40px;
 }
 .contact-form-input > input,
 .contact-form-input > textarea {
   width: 300px;
-  margin: 3px 0;
-  padding: 3px 5px;
+  margin: 5px 0;
+  padding: 5px 8px;
   border-radius: 0.5rem;
   outline: none;
   border: none;
+  font-size: 15px;
+}
+.contact-form-send {
+  height: 40px;
+  width: 25%;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
 /* BOOK SECTION */
 .book-section {
   margin-top: 40px;
 }
+
+.page-footer {
+  padding: 0 20px;
+}
+
 @media screen and (max-width: 1200px) {
   .spaces-container {
     grid-template-columns: repeat(2, 3fr);
@@ -291,6 +305,11 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .spaces-section,
+  .about-section,
+  .contact-section {
+    padding: 10px 20px;
+  }
   .spaces-container {
     grid-template-columns: repeat(1, 3fr);
   }
@@ -301,5 +320,11 @@ body {
   }
   .contact-images {
     flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-image > img {
+    width: 300px;
   }
 }
