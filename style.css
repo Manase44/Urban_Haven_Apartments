@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 /* variables */
@@ -19,6 +20,10 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: var(--main-font);
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 /* Navigation bar */
 .nav-bar {
@@ -40,10 +45,8 @@ body {
   gap: 20px;
 }
 .nav-link-item > a {
-  text-decoration: none;
   text-transform: capitalize;
   font-size: 18px;
-  color: #222;
   font-weight: 600;
 }
 .book-cta,
@@ -103,7 +106,6 @@ body {
   gap: 2rem;
 }
 .display-banner-cta > a {
-  text-decoration: none;
   height: 35px;
   width: max-content;
   display: flex;
@@ -114,7 +116,6 @@ body {
   border: 1px solid var(--secondary-color);
   border-radius: 2rem;
   transition: all 300ms linear;
-  color: inherit;
 }
 .view-spaces-cta,
 .book-viewing-cta:hover {
@@ -152,7 +153,8 @@ body {
   display: flex;
   justify-content: center;
 }
-.about-image > img {
+.about-image > img,
+.book-image > img {
   border-radius: 10px;
   width: 400px;
   box-shadow:
@@ -172,10 +174,11 @@ body {
   gap: 30px;
 }
 .space-category {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  /* height: max-content; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
   padding: 10px;
+  /* position: relative; */
 }
 .space-category-name {
   text-transform: capitalize;
@@ -198,7 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: grey;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 45px;
@@ -220,20 +223,20 @@ body {
   text-align: justify;
 }
 .space-amenities > ul > li {
-  list-style: none;
   font-size: 15px;
 }
 .space-category-price {
-  background-color: antiquewhite;
   text-align: center;
   font-size: 18px;
+  background-color: grey;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
 }
 
 /* CONTACT SECTION */
 .contact-section {
   margin-top: 20px;
   padding: 20px 40px;
-  background-color: #e2e8f0;
 }
 .contact-container {
   margin-top: 20px;
@@ -246,6 +249,11 @@ body {
   gap: 10px;
   justify-content: center;
   align-items: center;
+}
+.contact-images > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-form > form {
   text-align: center;
@@ -262,7 +270,7 @@ body {
   padding: 5px 8px;
   border-radius: 0.5rem;
   outline: none;
-  border: none;
+  border: 1px solid var(--secondary-color);
   font-size: 15px;
 }
 .contact-form-send {
@@ -275,11 +283,78 @@ body {
 
 /* BOOK SECTION */
 .book-section {
-  margin-top: 40px;
+  margin: 40px auto;
+  padding: 10px 40px;
+  /* background-image: url(/public/house-vewing.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+.book-container {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+.book-image > img {
+  height: 400px;
+  object-fit: cover;
+}
+.book-description {
+  padding: 20px;
+}
+.book-description > p {
+  text-align: justify;
 }
 
+/* FOOTER */
 .page-footer {
-  padding: 0 20px;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 20px;
+  background-color: grey;
+}
+.footer-map > iframe {
+  width: 80%;
+  height: 300px;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding: 10px 40px;
+}
+.important-links-content,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.important-links-content > h4,
+.social-links > h4 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.important-links-content > ul,
+.social-links > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.social-links > div > a,
+.important-links-content > ul > li {
+  padding: 10px;
+  border-bottom: 1px solid rgb(61, 60, 60);
+}
+.important-links-content > ul > li > a,
+.social-links > div > a {
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.important-links-content > ul > li > a:hover,
+.social-links > div > a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {
@@ -313,6 +388,10 @@ body {
   .spaces-container {
     grid-template-columns: repeat(1, 3fr);
   }
+  .contact-images > a {
+    flex-direction: column;
+    text-align: center;
+  }
   .contact-container {
     display: flex;
     flex-direction: column;
@@ -320,11 +399,29 @@ body {
   }
   .contact-images {
     flex-direction: row;
+    gap: 20px;
+  }
+  .book-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-image > img {
+    width: 300px;
+  }
+  .page-footer {
+    grid-template-columns: auto;
   }
 }
 
 @media screen and (max-width: 480px) {
   .about-image > img {
     width: 300px;
+  }
+  .footer-links {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .contact-images {
+    flex-direction: column;
   }
 }
