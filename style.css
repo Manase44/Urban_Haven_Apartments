@@ -313,10 +313,14 @@ a {
   display: grid;
   grid-template-columns: 3fr 5fr;
   gap: 20px;
-  background-color: grey;
+}
+.footer-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-map > iframe {
-  width: 80%;
+  width: 90%;
   height: 300px;
 }
 .footer-links {
@@ -382,8 +386,12 @@ a {
   }
   .spaces-section,
   .about-section,
+  .book-section,
   .contact-section {
     padding: 10px 20px;
+  }
+  .book-description {
+    padding: 0;
   }
   .spaces-container {
     grid-template-columns: repeat(1, 3fr);
